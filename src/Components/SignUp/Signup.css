@@ -1,0 +1,65 @@
+/* SignupComponent.css */
+
+/* General Styles */
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem;
+    perspective: 1000px; /* Adds perspective for 3D transforms */
+  }
+  
+  /* Style for each input field with a 3D effect */
+  .signup-input {
+    width: 80%;
+    max-width: 300px;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* Shadow for depth */
+    transform: translateZ(0); /* Ensures input is rendered on its own layer for performance */
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+  
+  .signup-input:focus {
+    outline: none;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* More pronounced shadow on focus */
+    transform: translateZ(20px); /* Slightly 'lifts' the input on focus */
+  }
+  
+  /* Style for the button with a 3D effect */
+  .signup-button {
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+  
+  .signup-button:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transform: translateY(-3px) translateZ(10px); /* Button 'rises' when hovered */
+  }
+  
+  /* Apply a subtle animation to the whole signup container for a 'floating' effect */
+  @keyframes float
+  {
+    0%, 100% {
+    transform: translateY(0);
+    }
+    50% {
+    transform: translateY(-10px);
+    }
+    }
+    
+    .signup-container {
+    animation: float 4s ease-in-out infinite;
+    }

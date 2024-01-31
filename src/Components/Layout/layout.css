@@ -1,0 +1,130 @@
+/* Combined and Optimized CSS */
+
+/* General Styles */
+.footer,
+.navbar,
+.container-fluid,
+.min-vh-100,
+.flex-grow-1,
+.overflow-auto,
+.sidebar,
+.header,
+.main {
+    box-sizing: border-box;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    text-align: center;
+    padding: 0.5rem;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem; /* Consolidated font-size */
+}
+
+.navbar-links .nav-link {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+    padding: 0.5rem 0.75rem; /* Consolidated padding */
+    transition: background-color 0.3s ease;
+}
+
+.navbar-links .nav-link:hover {
+    background-color: #0056b3;
+    border-radius: 0.25rem;
+}
+
+/* Layout Styles */
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    min-height: 60vh;
+}
+
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container-fluid {
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "sidebar header"
+            "sidebar main"
+            "footer footer";
+    }
+
+    .sidebar {
+        width: 200px;
+        position: static;
+        height: auto;
+        transform: none;
+        box-shadow: none;
+        padding: 0.5rem;
+    }
+
+    .header, .main, .footer {
+        padding: 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+/* Enhancements for Attractiveness and 3D Effects */
+
+/* Add some 3D effect to Navbar */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhance footer with a subtle gradient and 3D shadow */
+.footer {
+    background: linear-gradient(to bottom, #f8f9fa, #eaecef);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,53 @@
+/* chatbox.css */
+
+/* This assumes that you have a fixed navbar and footer height */
+.navbar {
+  height: 60px; /* Adjust to your navbar's actual height */
+}
+
+.footer {
+  height: 50px; /* Adjust to your footer's actual height */
+}
+
+/* Container for the chat and other elements */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 110px); /* 60px navbar + 50px footer */
+  margin-top: 60px; /* Same as navbar height */
+  margin-bottom: 50px; /* Same as footer height */
+}
+
+/* The chat area should flexibly take up all available space */
+.chat-content {
+  flex-grow: 1;
+  overflow-y: auto; /* Allows content to scroll */
+  padding: 1rem;
+}
+
+/* For the Card component containing the chat, ensure it does not exceed the viewport */
+.card {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The messages area within the card that should scroll */
+.messages-area {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Adjust the spacing and padding as needed */
+.message-input-area {
+  padding: 1rem;
+}
+
+/* Example classes for the header and footer if they are part of the React component */
+.header {
+  /* Your header styles */
+}
+
+.footer {
+  /* Your footer styles */
+}

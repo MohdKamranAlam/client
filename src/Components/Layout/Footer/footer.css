@@ -1,0 +1,19 @@
+/* footer.css */
+.footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    text-align: center;
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    /* Added a slight shadow for depth */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
